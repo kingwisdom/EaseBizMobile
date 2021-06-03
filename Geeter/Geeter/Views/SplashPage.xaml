@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Geeter.Views.SplashPage">
+    <ContentPage.Content>
+        <Grid>
+            <BoxView BackgroundColor="#FFF" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+            <StackLayout x:Name="imgLogo" VerticalOptions="Center" HorizontalOptions="Center" >
+                <Image Source="sp.gif"  />
+                <Label Text="GEETER" FontSize="18" FontFamily="MediumFont" TextColor="White" HorizontalTextAlignment="Center" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

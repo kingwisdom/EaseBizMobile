@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" NavigationPage.HasNavigationBar="False"
+             x:Class="Geeter.Views.AgentDetailsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowDefinitions="Auto,Auto,Auto">
+                <Label Text="&#x000f004d;" FontSize="30" TextColor="{DynamicResource DarkColor}" FontFamily="MaterialIcons" HorizontalOptions="Start" VerticalOptions="Start" Margin="20,20,0,30">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="back" Tapped="back_Tapped" NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Frame Grid.Row="1" BackgroundColor="White" CornerRadius="20" Padding="5" Margin="25,0,25,0" HasShadow="True" HeightRequest="150">
+
+                    <StackLayout Margin="0,50,0,0">
+                        <Label x:Name="name" FontFamily="BoldFont" TextColor="Black" FontSize="18" HorizontalOptions="Center" />
+                        <Label  TextColor="{DynamicResource DarkColor}" FontSize="14" HorizontalOptions="Center" FontFamily="MediumFont" x:Name="phone" />
+                        <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="&#x000f03f2;" FontSize="20" FontFamily="MaterialIcons" HorizontalOptions="Center" />
+                                <Label Text="Call" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="call" Tapped="call_Tapped" NumberOfTapsRequired="1" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="&#x000f036a;" FontSize="20" FontFamily="MaterialIcons" HorizontalOptions="Center" />
+                                <Label Text="SMS" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="sms" Tapped="sms_Tapped" NumberOfTapsRequired="1" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <pv:PancakeView Grid.Row="1" VerticalOptions="Start"  WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" CornerRadius="40" Padding="0" Margin="0,-40,0,0" >
+                    <Image Aspect="Fill" x:Name="profile" BackgroundColor="Transparent">
+                    </Image>
+                </pv:PancakeView>
+
+
+                <StackLayout Grid.Row="2" Spacing="15" Margin="20,15">
+                    <Label Text="Company Name" TextColor="DarkGray" FontFamily="LightFont" FontSize="11" />
+                    <Label x:Name="CompanyName" Text="company Name" FontFamily="BoldFont" TextColor="Black" FontSize="18" />
+                    <Label Text="Address" TextColor="DarkGray" FontFamily="LightFont" FontSize="11" />
+                    <Label x:Name="CompanyAddress" Text="Address 78, sddjddsds,skdkdfkdkdskdsks fdsfd" TextColor="{DynamicResource DarkColor}" FontSize="12" FontFamily="BoldFont" />
+
+                    <Label Text="Email" TextColor="DarkGray" FontFamily="LightFont" FontSize="11" />
+                    <Label x:Name="email" Text="Lagos state" TextColor="{DynamicResource DarkColor}" FontSize="12" FontFamily="BoldFont" />
+                    <Label Text="State" TextColor="DarkGray" FontFamily="LightFont" FontSize="11" />
+                    <Label x:Name="state" Text="Akoko North west" TextColor="{DynamicResource DarkColor}" FontSize="12" FontFamily="BoldFont" />
+
+                    <Label Text="Coverage Area" TextColor="DarkGray" FontFamily="LightFont" FontSize="11" />
+                    <Label Text="coverage Area" x:Name="CoverageArea" TextColor="{DynamicResource DarkColor}" FontSize="12" FontFamily="BoldFont" />
+
+                    <Label Text="Date Joined" TextColor="DarkGray" FontFamily="LightFont" FontSize="11" />
+                    <Label x:Name="dateCreated" TextColor="{DynamicResource DarkColor}" FontSize="12" FontFamily="BoldFont" />
+
+                    <Label Text="Bio" TextColor="DarkGray" FontFamily="LightFont" FontSize="11" />
+                    <Label x:Name="bio" TextColor="{DynamicResource DarkColor}" FontSize="12" FontFamily="BoldFont" />
+
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

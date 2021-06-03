@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" NavigationPage.HasNavigationBar="False"
+             x:Class="Geeter.Views.HomePage">
+    <ContentPage.Resources>
+        
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid RowDefinitions="Auto,80,Auto">
+                <StackLayout BackgroundColor="{DynamicResource PrimaryColor}" Grid.Row="0" Spacing="10"> 
+                    <Label Margin="20,10,0,0" Text="Find Housing Agents around you" TextColor="White" FontSize="16" FontFamily="MediumFont" />
+                    <Frame Margin="20,0" BackgroundColor="#FFF" CornerRadius="10" Padding="15,0">
+                        <Grid RowDefinitions="*,Auto">
+                            <Entry Placeholder="Search for Agents" />
+                            <Label Grid.Column="1" Text="&#x000f0935;" FontFamily="MaterialIcons" TextColor="{DynamicResource DarkColor}" VerticalOptions="Center" HorizontalOptions="End" />
+                        </Grid>
+                    </Frame>
+                    <BoxView HeightRequest="5" BackgroundColor="Transparent"/>
+                </StackLayout>
+
+                <Grid BackgroundColor="{DynamicResource DarkColor}" Grid.Row="1" Margin="0,-10,0,0">
+                    <StackLayout Margin="20,0" Padding="0,10" Spacing="10">
+                      
+                            <Label Text="Popular Agents" FontSize="14" FontFamily="LightFont" TextColor="White"  />
+                            <!--<Label Text="Show All" Grid.Column="1" HorizontalOptions="End" FontSize="14" FontFamily="LightFont" TextColor="White"  />-->
+                      
+
+                        <Frame BackgroundColor="White" HeightRequest="100" WidthRequest="30" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="2" BackgroundColor="#FEFEFE" Margin="0,-20,0,0">
+                    <CollectionView x:Name="agentList" Margin="20,10" SelectionChanged="agentList_SelectionChanged" SelectionMode="Single">
+                        <CollectionView.Header>
+                            <Label Text="Agents You can call" TextColor="{DynamicResource DarkColor}" FontSize="16" FontFamily="BoldFont" />
+                        </CollectionView.Header>
+                        <CollectionView.EmptyView>
+                            <Label Text="Empty Agent list" HorizontalOptions="Center" VerticalTextAlignment="Center" />
+                        </CollectionView.EmptyView>
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout ItemSpacing="15" Orientation="Vertical" />
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame CornerRadius="20" BackgroundColor="White" HeightRequest="120" Padding="0">
+                                    <Grid ColumnDefinitions="1*,1.8*">
+                                        <Image Source="{Binding Photo}" VerticalOptions="Center" WidthRequest="30" Aspect="Fill" />
+                                        <StackLayout Spacing="5" Grid.Column="1" Margin="0,10,0,10">
+                                            <Label Text="{Binding fullName}" FontSize="14" FontFamily="MediumFont" />
+                                            <Label>
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="&#x000f03f2;" FontSize="12" FontFamily="MaterialIcons" />
+                                                        <Span Text=" " />
+                                                        <Span Text="{Binding phone}" FontSize="12" FontFamily="LightFont" />
+                                                       
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                            <Label>
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="&#x000f034e;" FontSize="12" FontFamily="MaterialIcons" />
+                                                        <Span Text="{Binding city}" FontSize="12" FontFamily="LightFont" />
+                                                        <Span Text=" . " />
+                                                        <Span Text="{Binding state}" FontSize="12" FontFamily="LightFont" />
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <BoxView BackgroundColor="{DynamicResource GrayColor}" HeightRequest="1" />
+                                            <Label FontFamily="MediumFont" Text="Contact Now" />
+                                        </StackLayout>
+                                    </Grid>
+                                    
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+
+
+                <ActivityIndicator Color="{DynamicResource PrimaryColor}" IsRunning="True" IsVisible="false" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="2" x:Name="loading" />
+            </Grid>
+
+            <!--<pv:PancakeView HorizontalOptions="End" VerticalOptions="End" Margin="30" CornerRadius="40" Padding="15" BackgroundColor="{DynamicResource DangerColor}">
+                <ImageButton x:Name="create" Clicked="add_Clicked" BackgroundColor="Transparent">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="MaterialIcons"
+                                 Color="White"
+                                 Glyph="&#x000f0415;" Size="30"/>
+                    </ImageButton.Source>
+
+                </ImageButton>
+            </pv:PancakeView>-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

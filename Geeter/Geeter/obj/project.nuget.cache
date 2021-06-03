@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "mH906MVEmpKRtQHl2gPtV3DGEC0sdpb2F0wWMyIMg45ttpE/KgsdBF8rrdiMS4Fw7mbNm1xSGnG+jGIAptX4cQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\COMPLUS\\Desktop\\Complustech Dotnet Project\\Geeter\\Geeter\\Geeter\\Geeter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\COMPLUS\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.0.4\\com.airbnb.xamarin.forms.lottie.4.0.4.nupkg.sha512",
+    "C:\\Users\\COMPLUS\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\COMPLUS\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\COMPLUS\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\COMPLUS\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\COMPLUS\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\COMPLUS\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\COMPLUS\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\COMPLUS\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\COMPLUS\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\COMPLUS\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
+  ],
+  "logs": []
+}

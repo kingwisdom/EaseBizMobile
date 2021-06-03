@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" NavigationPage.HasNavigationBar="False"
+             x:Class="Geeter.Views.StartPage" >
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="landing.jpg" Aspect="AspectFill" />
+            <BoxView BackgroundColor="#000" Opacity="0.8" />
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Spacing="24"  Margin="20,0">
+                
+                <Label BackgroundColor="Black" Padding="15" Text="ESTATE AGENT NETWORK" TextColor="White" FontFamily="MediumFont" FontSize="24"  HorizontalOptions="Center"/>
+                <Label Text="Get all the numbers of estate agents around your area" FontSize="14" Margin="0,10" FontFamily="MediumFont" HorizontalTextAlignment="Center" TextColor="White" />
+                <Label Text="Choose a default colour and your current state from the list below" FontSize="12" FontFamily="LigthFont" HorizontalTextAlignment="Center" TextColor="White" />
+
+                <!--<Label Text="Select Theme Color" TextColor="White" HorizontalOptions="Center" FontFamily="BoldFont" />-->
+                <Picker x:Name="colorPicker" Title="Select Your Theme Color" TitleColor="LightGray" TextColor="White" SelectedIndexChanged="colorPicker_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Blue</x:String>
+                            <x:String>Red</x:String>
+                            <x:String>Pink</x:String>
+                            <x:String>Brown</x:String>
+                            <x:String>Black</x:String>
+                            <x:String>Green</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <!--<Label HorizontalOptions="Center" TextColor="White" FontFamily="BoldFont" />-->
+
+                <Picker x:Name="statePicker" Title="Select Your Current State" TitleColor="LightGray" TextColor="White" SelectedIndexChanged="statePicker_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Abia</x:String>
+                            <x:String>Abuja</x:String>
+                            <x:String>Lagos</x:String>
+                            <x:String>Ondo</x:String>
+                            <x:String>Ogun</x:String>
+                            <x:String>Oyo</x:String>
+                            <x:String>Rivers</x:String>
+                            <x:String>Sokoto</x:String>
+                            <x:String>Taraba</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                
+                <Button Text="GET STARTED" Style="{StaticResource Buttons}" HorizontalOptions="Center" Margin="0,60,0,0" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

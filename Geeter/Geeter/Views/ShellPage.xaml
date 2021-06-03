@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:Geeter.Views"
+             x:Class="Geeter.Views.ShellPage" Shell.NavBarIsVisible="False">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="GrayColor">Gray</Color>
+            <Color x:Key="BgColor">#F0F0F0</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource BgColor}"/>
+                <Setter Property="Shell.TabBarForegroundColor" Value="{DynamicResource PrimaryColor}"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource GrayColor}"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{DynamicResource PrimaryColor}"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}"/>
+            <FontImage x:Key="MoreIcon" FontFamily="FontIcon" Glyph='&#xf141;' Size="20" Color="Black" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <Tab Title="Home">
+            <Tab.Icon>
+                <FontImageSource FontFamily="MaterialIcons" Glyph="&#x000f02de;" Size="Large"/>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
+        </Tab>
+
+        <Tab Title="Categories">
+            <Tab.Icon>
+                <FontImageSource FontFamily="MaterialIcons" Glyph="&#x000f01d6;" Size="Large"/>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:CategoryPage}" />
+        </Tab>
+        <Tab Title="Settings">
+            <Tab.Icon>
+                <FontImageSource FontFamily="MaterialIcons" Glyph="&#x000f0493;" Size="Large"/>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
+        </Tab>
+        
+    </TabBar>
+</Shell>
